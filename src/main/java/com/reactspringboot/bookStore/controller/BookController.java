@@ -10,9 +10,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
+@RequestMapping("api/v1")
 public class BookController {
 
-  @GetMapping("api/v1/books")
+  @GetMapping("books")
   public ResponseEntity<List<BookDto>> getBooks() {
     BookDto book = BookDto.builder()
         .title("My first book title")
